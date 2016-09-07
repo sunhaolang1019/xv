@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ol, ul ,li{list-style: none;} 
+        .box{
+            width: 600px;
+            height: 100px;
+            background:#ddd;
+            margin:100px auto;
+            position:relative;
+        }
+      
+        .box ul li{
+            float: left;
+            border-radius: 20px;
+            width: 100px;
+            height: 50px;
+            background:#bbb;
+            margin:25px 0 0 17px;
+            position:relative; 
+            overflow:hidden;
+            box-shadow: 0 0 10px #000;
+        }
+        .box ul li span{
+            background:red;
+            width: 100px;
+            height: 50px;
+            border-radius: 20px 20px 0 0;
+            position:absolute;
+            top:0;left:0;
+            -webkit-transition: 0.3s all ease;
+
+        }
+        .box ul li:hover span{
+            top:-50px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <span></span>
+                <img _src="" alt="" />
+            </li>
+            <li>
+                <span></span>
+                <img _src="" alt="" />
+            </li>
+            <li>
+                <span></span>
+                <img _src="" alt="" />
+            </li>
+            <li>
+                <span></span>
+                <img _src="" alt="" />
+            </li>
+            <li>
+                <span></span>
+                <img _src="" alt="" />
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

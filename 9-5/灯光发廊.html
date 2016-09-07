@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>发廊灯光</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        @keyframes data{
+           from{left:-113px;}
+           to{left:0;}
+        }
+       
+        .div1{
+            width: 113px;
+            height: 500px;
+            border:1px solid #000;
+            position:absolute;
+            left: 0;top:0;bottom:0;right: 0;
+            margin:auto;
+            overflow: hidden;
+        }
+         .div2{
+            width: 500px;
+            height: 500px;
+            background:-webkit-repeating-linear-gradient(left top,#00ffff 0px,#00ffff 20px,#ee11ee 20px,#ee11ee 40px);
+            animation:data 1s linear infinite;
+            position:absolute;
+            left:0;
+            top:0;
+         }
+
+    </style>
+    <script type="text/javascript">
+    window.onload = function(){
+        var aBtn = document.querySelectorAll('input');
+        var oDiv = document.querySelector('.div2');
+        for(var i=0;i<aBtn.length;i++){
+            
+            this.onchange = function(){
+
+                oDiv.style.background = '-webkit-repeating-linear-gradient(left top,'+aBtn[0].value+' 0px,'+aBtn[0].value+' 20px,'+aBtn[1].value+' 20px,'+aBtn[1].value+' 40px)';
+            };
+        }
+    };
+    </script>
+</head>
+<body>
+<input type="color" value="#00ffff" id="one" />
+<input type="color" value="#ee11ee" id="two" />
+    <div class="div1" >
+        <div class="div2" >
+            
+        </div>
+    </div>
+</body>
+</html>

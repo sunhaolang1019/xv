@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    border:0;
+}
+ol, ul ,li{list-style: none;} 
+.sun{
+    width: 100px;
+    height: 100px;
+    background: #fc3;
+    border-radius: 50%;
+    box-shadow: 0 0 100px #ff0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.content{
+    height: 200px;
+    line-height: 200px;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 200px;
+
+    text-shadow: 0 0 2px #000;
+
+}
+</style>
+<script type="text/javascript">
+window.onload = function(){
+    var oSun = document.querySelector('.sun');
+    var oCon = document.querySelector('.content');
+    document.onmousemove = function(ev){
+
+        oSun.style.left = ev.pageX-oSun.offsetWidth/2+'px';
+        oSun.style.top = ev.pageY-oSun.offsetHeight/2+'px';
+        //字体的中心-太阳的中心
+        var x=oCon.offsetLeft+oCon.offsetWidth/2-ev.pageX;
+        var y=oCon.offsetTop+oCon.offsetHeight/2-ev.pageY;
+       
+        oCon.style.textShadow=x+'px '+y+'px '+Math.sqrt(x*x+y*y)/30+'px #000';
+    };
+
+};
+</script>
+</head>
+<body>
+<div class="sun"></div>
+<p class="content">孙颢郎</p>
+</body>
+</html>
