@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Document</title>
+<style type="text/css">
+    .box{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border:5px solid #000;
+        position:relative;
+        margin: 100px auto;
+    }
+    .hour{
+        width: 8px;
+        height: 80px;
+        background: #000;
+        border-radius: 50% 50% 0 0;
+        position: absolute;
+        margin-left: -4px;
+        left: 50%;
+        top:70px;
+
+    }
+    .min{
+        width: 8px;
+        height: 100px;
+        border-radius: 50% 50% 0 0;
+        background: #000;
+        margin-left: -4px;
+        position: absolute;
+        left: 50%;
+        top:50px;
+    }
+    .sec{
+        background: #f60;
+        width: 6px;
+        height: 120px;
+        border-radius: 50% 50% 0 0;
+        margin-left: -3px;
+        position: absolute;
+        left: 50%;
+        top:30px;
+    }
+</style>
+<script type="text/javascript">
+    window.onload = function(){
+        var oBox = document.querySelector('.box');
+        var oH = document.querySelector('.hour');
+        var oM = document.querySelector('.min');
+        var oS = document.querySelector('.sec');
+        var oSPan = document.querySelector('span');
+        var oDate = new Date();
+        var H = getHours();
+        var M = getMinutes();
+        var S = getSeconds();
+        for(var i=0;i<60;i++){
+            
+        }
+        setInterval(function(){
+
+        },1000);
+    };
+</script>
+</head>
+<body>
+<div class="box">
+    <span></span>
+    <div class="hour"></div>
+    <div class="min"></div>
+    <div class="sec"></div>
+</div>
+</body>
+</html>

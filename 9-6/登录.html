@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+    div{
+        width: 300px;
+        height: 200px;
+        border-radius: 20px;
+        background: #ccc;
+        text-align: center;
+        line-height: 200px;
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -150px;
+        margin-top: -100px;
+        /*display:none;*/
+        /*position:absolute;*/
+        -webkit-transform: scale(3,4);
+        transition:1s all ease;
+        opacity:0;
+    }
+</style>
+<script type="text/javascript">
+    window.onload = function(){
+        var oLogin = document.querySelector('.login');
+        var oOut = document.querySelector('.out');
+        var oBox = document.querySelector('.box');
+        oLogin.onclick = function(){
+            oBox.style.display = 'block';
+            oBox.style.opacity = '1';
+            oBox.style.WebkitTransition='1s all ease';
+        };
+    };
+</script>
+</head>
+<body>
+<a href="javascript:;" class="login">登录</a>
+<div class="box">
+    <a href="javascript:;" class="out">×</a>
+</div>
+</body>
+</html>     

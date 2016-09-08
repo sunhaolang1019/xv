@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            background: aqua;
+            text-align: center;
+            font-family:微软雅黑;
+            font-size: 50px;
+        }
+        span {
+            display: inline-block;
+            width:300px;
+            height:100px;
+            color: rgba(255, 134, 0, 0.3);
+            background: -webkit-linear-gradient(-30deg, rgba(255, 255, 255, 0) 80px, rgba(255, 255, 255, 1) 160px, rgba(255, 255, 255, 1) 240px, rgba(255, 255, 255, 0) 300px) -300px 0 no-repeat;
+            -webkit-background-clip: text;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oS = document.querySelector('.span');
+            var timer = null;
+            var left = -300;
+            function Move() {
+                clearInterval(timer);
+                timer = setInterval(function () {
+                    left += 10;
+                    if (left == 2000) {
+                        left = -300;
+                        clearInterval(timer);
+                    }
+                    oS.style.backgroundPosition = left + "px 0px";
+                }, 30);
+            }
+            Move();
+            setInterval(function () {
+                Move();
+            }, 1000);
+        };
+
+    </script>
+</head>
+<body>
+<div class="box">
+<span class="span">移动滑块解锁</span>
+<span class="span">移动滑块解锁</span>
+</div>
+
+</body>
+</html>
